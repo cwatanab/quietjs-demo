@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name=”viewport” content=”width=device-width,initial-scale=1″>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Send Text</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>quiet-js demo</h1>
+        </header>
+
+        <label for="profile">Profile Name:</label>
+        <select name="profile" id="profile">
+            <option value="audible">audible</option>
+            <option value="audible-7k-channel-0">audible-7k-channel-0</option>
+            <option value="audible-7k-channel-1">audible-7k-channel-1</option>
+            <option value="cable-64k">cable-64k</option>
+            <option value="hello-world">hello-world</option>
+            <option value="ultrasonic">ultrasonic</option>
+            <option value="ultrasonic-3600">ultrasonic-3600</option>
+            <option value="ultrasonic-whisper">ultrasonic-whisper</option>
+            <option value="wideband-dsss">wideband-dsss</option>
+            <option value="audible-fsk">audible-fsk</option>
+            <option value="ultrasonic-fsk">ultrasonic-fsk</option>
+            <option value="ultrasonic-experimental">ultrasonic-experimental</option>
+            <option value="audible-fsk-robust">audible-fsk-robust</option>
+            <option value="ultrasonic-fsk-robust">ultrasonic-fsk-robust</option>
+            <option value="audible-fsk-fast">audible-fsk-fast</option>
+            <option value="ultrasonic-fsk-fast">ultrasonic-fsk-fast</option>
+        </select>
+
+        <h2>Send Text</h2>
+        <section>
+            <div class="hidden" data-quiet-warning></div>
+            <div class="form-group">
+                <textarea autofocus="true" autocapitalize="none" autocomplete="off" spellcheck="off"
+                    class="form-control" style="resize:none" rows="5" data-quiet-text-input>1234</textarea>
+            </div>
+            <button type="button" class="btn btn-default" style="width:100%" data-quiet-send-button
+                data-quiet-sending-text="Sending...">Send</button>
+        </section>
+
+        <h2>Receive Text</h2>
+        <section>
+            <div class="hidden" data-quiet-warning></div>
+            <pre data-quiet-receive-text-target>Your received text will show up here. Waiting...</pre>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="quiet.js"></script>
+    <script type="text/javascript" src="sendtext.js"></script>
+    <script type="text/javascript" src="receivetext.js"></script>
+    <script async type="text/javascript" src="quiet-emscripten.js"></script>
+</body>
+
+</html>
